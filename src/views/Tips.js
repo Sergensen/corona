@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet, Dimensions, Button } from 'react-native';
 
-export default class Content extends Component {
+export default class Tips extends Component {
   render() {
-      const { goBack, data } = this.props;
-      const { web, url, contentId, title } = data;
+      const { goBack } = this.props;
       
     return (
       <ScrollView style={styles.container}>

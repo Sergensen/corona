@@ -1,38 +1,50 @@
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   StatusBar,
-  Dimensions
-} from 'react-native';
-
-import Header from './Header';
-import MainView from './MainView';
-
-import { Button, ThemeProvider } from 'react-native-elements';
+  Dimensions,
+} from 'react-native'
+import {Button, ThemeProvider} from 'react-native-elements'
+import Header from './Header'
+import MainView from './MainView'
 
 const App: () => React$Node = () => {
+  const cards = [
+      {
+        contentId: 1,
+        title: 'one',
+        web: true,
+        url: ""
+      },
+      {
+        contentId: 2,
+        title: 'two',
+        web: true,
+        url: ""
+      },
+      {
+        contentId: 3,
+        title: 'three',
+        web: false,
+      },
+      {
+        contentId: 4,
+        title: 'four',
+        web: false,
+      },
+    ];
+
   return (
-    <>
-      <StatusBar />
+    <ThemeProvider>
+      <StatusBar hidden />
       <SafeAreaView>
-        <ThemeProvider>
-          <Header style={styles.header} />
-          <MainView style={styles.mainView} />
-        </ThemeProvider>
+        <Header />
+        <MainView cards={cards} />
       </SafeAreaView>
-    </>
-  );
-};
+    </ThemeProvider>
+  )
+}
 
-const styles = StyleSheet.create({
-  header: {
-    height: Dimensions.get('screen').height * 0.1
-  },
-  mainView: {
-    height: Dimensions.get('screen').height * 0.9
-  }
-});
-
-export default App;
+export default App

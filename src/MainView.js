@@ -5,7 +5,7 @@ import {
   View,
   Dimensions,
   BackHandler,
-  ImageBackground,
+  Image,
   TouchableOpacity
 } from 'react-native'
 import { ListItem, Text, Button } from 'react-native-elements'
@@ -96,9 +96,8 @@ export default class MainView extends Component {
       <ScrollView contentContainerStyle={styles.container} >
         {cards.map(({ contentId, imageUrl, title }) => (
           <View key={contentId+title} style={styles.elementContainer}>
-          <ImageBackground 
-          // source={{uri: "" + imageUrl}} 
-          source={imageUrl} 
+          <View 
+          // source={imageUrl} 
           style={styles.imageBackgroundContainer} resizeMode="cover">
             <ListItem
               Component={TouchableOpacity}
@@ -109,13 +108,15 @@ export default class MainView extends Component {
               }}
               title={title}
               titleStyle={styles.itemTitle}
-              // subtitle={"l.subtitle"}
               containerStyle= {styles.containerStyle}
               contentContainerStyle={styles.contentContainerStyle}
-
-
             />
-          </ImageBackground>
+          </View>
+
+          <View style={styles.cardImageContainer}>
+            <Image style={styles.cardImage} source={imageUrl} />
+          </View>
+
           </View>
         ))}
       </ScrollView>
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
   },
   elementContainer:{
     width: "90%", 
-    height: Dimensions.get('screen').height * 0.175,
+    height: Dimensions.get('screen').height * 0.125,
     marginTop: 10,
     marginBottom: 10,
     borderRadius: 15,
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
   imageBackgroundContainer:{
     width: "100%", 
     height: "100%",
-    
+    backgroundColor: "white"
   },
   card: {
     // backgroundColor: 'green',
@@ -159,12 +160,12 @@ const styles = StyleSheet.create({
     // margin: '2.5% 5%',
   },
   itemTitle:{
-    color: "white",
-    fontWeight: "bold",
+    // color: "white",
+    // fontWeight: "bold",
     fontSize: 25,
-    textShadowColor: 'rgba(0, 0, 0, 1)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 1,
+    // textShadowColor: 'rgba(0, 0, 0, 1)',
+    // textShadowOffset: { width: 1, height: 1 },
+    // textShadowRadius: 1,
   },
   containerStyle:{
     backgroundColor: null,
@@ -177,5 +178,15 @@ const styles = StyleSheet.create({
     justifyContent: "center", 
     alignItems: "center"
   },
+  cardImageContainer:{
+    position: "absolute",
+    right: 0,
+    width: "20%",
+    height: "100%",
+  },
+  cardImage:{
+    width: "100%",
+    height: "100%",
+  }
   
 })

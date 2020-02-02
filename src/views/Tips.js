@@ -102,7 +102,7 @@ export default class Tips extends Component {
               <Text h3 style={styles.titleText}>
                 {section.title}
               </Text>
-              <Text style={styles.textText} h4>{section.text}</Text>
+              <Text style={styles.textText}>{section.text}</Text>
               <View style={styles.imageContainer}>
                 <Image
                   resizeMode='cover'
@@ -134,10 +134,14 @@ const styles = StyleSheet.create({
   },
   titleText: {
     paddingBottom: 10,
+    marginLeft: 10,
+    marginRight: 10
   },
   textText: {
       marginLeft: 20,
       marginRight: 20,
+      fontSize: 19,
+      marginBottom: 10
   },
   imageContainer: {
     paddingBottom: 20,

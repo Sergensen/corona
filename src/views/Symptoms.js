@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Dimensions, Button } from 'react-native';
+import { ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { Text } from 'react-native-elements';
 
-export default class Symtoms extends Component {
+export default class Symptoms extends Component {
   render() {
-      const { goBack } = this.props;
-      
     return (
       <ScrollView style={styles.container}>
-        <Button title="Back" onPress={() => goBack()}  />
+        <Text h1>Symptoms</Text>
+        <Text h4>Symptoms</Text>
       </ScrollView>
     );
   }
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         minHeight: Dimensions.get('screen').height,
-        backgroundColor: "yellow"
+        padding: "5%",
+        paddingTop: "2.5%"
     }
 });

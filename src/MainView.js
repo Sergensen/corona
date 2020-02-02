@@ -21,28 +21,28 @@ export default class MainView extends Component {
     cards: [
         {
             contentId: 1, 
-            component: <Web goBack={() => this.goBack()} key={0} id="news" uri="https://news.google.com/search?q=coronavirus" />
+            component: <Web key={0} id="news" uri="https://news.google.com/search?q=coronavirus" />
         }, {
             contentId: 2, 
-            component: <Web goBack={() => this.goBack()} key={1} id="flights" uri="https://steemitimages.com/p/PB8ro82ZpZP1LwhMpNsM9QB2i14js7msiXzEBSZa8hiozvtW63jynMFXdEDznFjmAoQZXcgWTggyFtTxYPNkSJQvRRvJAtQgSscNQK1ZBAdtpMQM?format=match&mode=fit&width=640" />
+            component: <Web key={1} uri="https://flightaware.com/live/findflight/" />
         }, {
             contentId: 3, 
-            component: <Web goBack={() => this.goBack()} key={2} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
+            component: <Web key={2} uri="https://de.wikipedia.org/wiki/Coronaviridae" />
         }, {
             contentId: 4, 
-            component: <Web goBack={() => this.goBack()} key={3} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
+            component: <Web key={3} uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
         }, {
             contentId: 5, 
-            component: <Tips goBack={() => this.goBack()} key={4} />,
+            component: <Tips key={4} />,
         }, {
             contentId: 6, 
-            component:  <Symptoms goBack={() => this.goBack()} key={5} />
+            component:  <Symptoms key={5} />
         }, {
             contentId: 7, 
-            component: <Legal goBack={() => this.goBack()} key={6} />,
+            component: <Legal key={6} />,
         }, {
             contentId: 8, 
-            component:  <Privacy goBack={() => this.goBack()} key={7} />
+            component:  <Privacy key={7} />
         }
     ]
   }
@@ -65,10 +65,6 @@ export default class MainView extends Component {
       this.setState({contentId: 0})
     }
     return true
-  }
-
-  goBack() {
-      this.setState({contentId: 0})
   }
 
   render () {

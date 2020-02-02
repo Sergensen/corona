@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Dimensions } from 'react-native'
 import { Text} from 'react-native-elements'
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import Icon from 'react-native-vector-icons/Entypo';
 
 export default class Header extends Component {
   render () {
@@ -9,7 +9,7 @@ export default class Header extends Component {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerText}>Coronavirus</Text>
-                <Icon.Button style={styles.menuButton} iconStyle={{marginRight: 3, margin: 3}} name="menu" onPress={() => console.log("pressed this shit harder than sharting")}/>
+                <Icon.Button style={styles.menuButton} iconStyle={{marginRight: 2, margin: 2}} name="home" size={25} onPress={() => console.log("pressed this shit harder than sharting")}/>
             </View>
         </View>
     )

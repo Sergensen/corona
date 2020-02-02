@@ -5,11 +5,12 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 export default class Header extends Component {
   render () {
+      const { reset } = this.props;
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerText}>Coronavirus</Text>
-                <Icon.Button style={styles.menuButton} iconStyle={{marginRight: 2, margin: 2}} name="home" size={25} onPress={() => console.log("pressed this shit harder than sharting")}/>
+                <Icon.Button style={styles.menuButton} iconStyle={{marginRight: 2, margin: 2}} name="home" size={25} onPress={() => reset()}/>
             </View>
         </View>
     )

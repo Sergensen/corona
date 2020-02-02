@@ -155,29 +155,30 @@ export default class MainView extends Component {
 
     return contentId === 0 ? (
       <ScrollView contentContainerStyle={styles.container}>
-        {cards.map(({contentId, imageUrl, title}) => (
-          <View key={contentId + title} style={styles.elementContainer}>
-            <View
-              // source={imageUrl}
-              style={styles.imageBackgroundContainer}>
-              <View style={styles.cardImageContainer}>
-                <Image style={styles.cardImage} source={imageUrl}/>
-              </View>
-              <ListItem
-                Component={TouchableOpacity}
-                key={contentId}
-                style={styles.card}
-                onPress={() => {
-                  this.setState({contentId})
-                }}
-                title={title}
-                titleStyle={styles.itemTitle}
-                containerStyle={styles.containerStyle}
-                contentContainerStyle={styles.contentContainerStyle}
-              />
+            {cards.map(({contentId, imageUrl, title}) => (
+            <View key={contentId + title} style={styles.elementContainer}>
+                <View
+                // source={imageUrl}
+                style={styles.imageBackgroundContainer}>
+                <View style={styles.cardImageContainer}>
+                    <Image style={styles.cardImage} source={imageUrl} />
+                </View>
+                <ListItem
+                    Component={TouchableOpacity}
+                    key={contentId}
+                    style={styles.card}
+                    onPress={() => {
+                    this.setState({contentId})
+                    }}
+                    title={title}
+                    titleStyle={styles.itemTitle}
+                    containerStyle={styles.containerStyle}
+                    contentContainerStyle={styles.contentContainerStyle}
+                />
+                </View>
             </View>
-          </View>
-        ))}
+            ))}
+            <View style={{height: Dimensions.get('screen').height * 0.125}} key={8} />
       </ScrollView>
     ) : (
       cards.find(card => card.contentId === contentId).component
@@ -187,15 +188,13 @@ export default class MainView extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    // height: "100%",
     // display: 'flex',
     // height: ,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'blue',
-    paddingTop: '2.5%',
-    // paddingBottom: "20%"
+    //paddingBottom: "20%"
   },
   elementContainer: {
     width: '90%',
@@ -206,7 +205,6 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     // alignItems: "center",
     // justifyContent: "center",
-    backgroundColor: 'yellow',
     elevation: 5,
   },
   imageBackgroundContainer: {

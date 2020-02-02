@@ -26,7 +26,7 @@ export default class MainView extends Component {
         contentId: 1,
         title: translate.titleTips,
         imageUrl: require('../src/resources/images/BlurryTips.jpg'),
-        component: <Tips goBack={() => this.goBack()} key={0} />,
+        component: <Tips key={0} />,
       },
       {
         contentId: 2,
@@ -34,7 +34,6 @@ export default class MainView extends Component {
         imageUrl: require('../src/resources/images/BlurryNews.jpg'),
         component: (
           <Web
-            goBack={() => this.goBack()}
             key={1}
             id='news'
             uri='https://news.google.com/search?q=coronavirus'
@@ -47,7 +46,6 @@ export default class MainView extends Component {
         imageUrl: require('../src/resources/images/BlurryLiveMap.jpg'),
         component: (
           <Web
-            goBack={() => this.goBack()}
             key={2}
             id='livemap'
             uri='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61'
@@ -60,7 +58,6 @@ export default class MainView extends Component {
         imageUrl: require('../src/resources/images/BlurryFlight.jpg'),
         component: (
           <Web
-            goBack={() => this.goBack()}
             key={3}
             id='flights'
             uri='https://flightaware.com/live/findflight/'
@@ -73,7 +70,6 @@ export default class MainView extends Component {
         imageUrl: require('../src/resources/images/BlurryWikipedia.jpg'),
         component: (
           <Web
-            goBack={() => this.goBack()}
             key={4}
             id='infos'
             uri='https://de.wikipedia.org/wiki/Coronaviridae'
@@ -84,19 +80,19 @@ export default class MainView extends Component {
         contentId: 6,
         title: translate.titleSymptoms,
         imageUrl: require('../src/resources/images/BlurrySymptoms.jpg'),
-        component: <Symptoms goBack={() => this.goBack()} key={5} />,
+        component: <Symptoms  key={5} />,
       },
       {
         contentId: 7,
         title: translate.legalTitle,
         imageUrl: require('../src/resources/images/law.png'),
-        component: <Legal goBack={() => this.goBack()} key={6} />,
+        component: <Legal key={6} />,
       },
       {
         contentId: 8,
         title: translate.privacyTitle,
         imageUrl: require('../src/resources/images/privacy.png'),
-        component: <Privacy goBack={() => this.goBack()} key={7} />,
+        component: <Privacy key={7} />,
       },
     ],
   }
@@ -116,21 +112,7 @@ export default class MainView extends Component {
       this.setState({contentId: 0})
       reset()
     }
-
-    if (
-      contentId === 2 ||
-      contentId === 3 ||
-      contentId === 4 ||
-      contentId === 5
-    ) {
-      if (this.backHandler) this.backHandler.remove()
-    } else {
-      if (this.backHandler) this.backHandler.remove()
-      this.backHandler = BackHandler.addEventListener(
-        'hardwareBackPress',
-        this.handleBackPress,
-      )
-    }
+   
   }
 
   componentWillUnmount () {
@@ -140,14 +122,10 @@ export default class MainView extends Component {
   handleBackPress = () => {
     if (this.state.contentId === 0) {
       BackHandler.exitApp()
-    } else {
+    } else if(this.state.contentId === 1 || this.state.contentId === 6 || this.state.contentId === 7 || this.state.contentId === 8 ){
       this.setState({contentId: 0})
     }
     return true
-  }
-
-  goBack () {
-    this.setState({contentId: 0})
   }
 
   render () {

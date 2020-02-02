@@ -89,13 +89,13 @@ export default class MainView extends Component {
       {
         contentId: 7,
         title: translate.legalTitle,
-        imageUrl: '',
+        imageUrl: require('../src/resources/images/law.png'),
         component: <Legal goBack={() => this.goBack()} key={6} />,
       },
       {
         contentId: 8,
         title: translate.privacyTitle,
-        imageUrl: '',
+        imageUrl: require('../src/resources/images/privacy.png'),
         component: <Privacy goBack={() => this.goBack()} key={7} />,
       },
     ],
@@ -161,7 +161,7 @@ export default class MainView extends Component {
               // source={imageUrl}
               style={styles.imageBackgroundContainer}>
               <View style={styles.cardImageContainer}>
-                <Image style={styles.cardImage} source={imageUrl} />
+                <Image style={styles.cardImage} source={imageUrl}/>
               </View>
               <ListItem
                 Component={TouchableOpacity}

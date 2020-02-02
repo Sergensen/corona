@@ -37,7 +37,7 @@ export default class MainView extends Component {
             goBack={() => this.goBack()}
             key={1}
             id='news'
-            uri='https://news.google.com/search?q=coronavirus'
+            uri={translate.english ? "https://news.google.com/search?q=coronavirus&hl=en-US&gl=US" : 'https://news.google.com/search?q=corona%20vireus&hl=de&gl=DE&ceid=DE%3Ade'}
           />
         ),
       },
@@ -76,7 +76,7 @@ export default class MainView extends Component {
             goBack={() => this.goBack()}
             key={4}
             id='infos'
-            uri='https://de.wikipedia.org/wiki/Coronaviridae'
+            uri={'https://'+ translate.english ? 'en' : "de" +'.wikipedia.org/wiki/Coronaviridae'}
           />
         ),
       },
@@ -152,7 +152,6 @@ export default class MainView extends Component {
 
   render () {
     const {contentId, cards} = this.state
-
     return contentId === 0 ? (
       <ScrollView contentContainerStyle={styles.container}>
             {cards.map(({contentId, imageUrl, title}) => (

@@ -72,11 +72,14 @@ export default class Tips extends Component {
   }
   render () {
     const {english, german} = this.state
-    if (!translate.english) {
+    if (translate.english) {
       return (
         <ScrollView style={styles.container}>
           {english.map(section => (
             <View style={styles.section}>
+                          <Text h2 style={styles.titleText}>
+                {translate.titleTips}
+              </Text>
               <Text h4 style={styles.titleText}>
                 {section.title}
               </Text>
@@ -99,6 +102,10 @@ export default class Tips extends Component {
         <ScrollView style={styles.container}>
           {german.map(section => (
             <View style={styles.section}>
+              <Text h2 style={styles.titleText}>
+                {translate.titleTips}
+              </Text>
+
               <Text h3 style={styles.titleText}>
                 {section.title}
               </Text>
@@ -134,6 +141,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     paddingBottom: 10,
+    width: "90%"
   },
   textText: {
       marginLeft: 20,

@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: '5%',
     paddingTop: '2.5%',
-    backgroundColor: 'rgba(255,255,255,0.75)',
+    backgroundColor: 'rgba(255,255,255,0.9)',
   },
 })

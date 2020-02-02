@@ -5,6 +5,17 @@ import LocalizedStrings from 'react-native-localization';
 
 export let translate = new LocalizedStrings({
   "en-US": {
+      symptomText: "The following symptoms may indicate that you have become infected: ",
+symptom1: "Fever",
+symptom2: "Cough",
+symptom3: "A headache",
+symptom4: "Shortness of breath",
+symptom5: "A dry throat",
+symptom6: "Chest pain",
+symptom7: "An increased heartrate",
+symptom8: "Kidney failure",
+symptom9: "Diarrhea",
+symptom10: "Indigestion",
       english: true,
       titleTips: "General Tips",
       titleNews: "Live News",
@@ -272,7 +283,18 @@ Copyright
 The contents and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.
 Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of any infringements, we will remove such content immediately.
 
-`
+`,
+symptomText: "The following symptoms may indicate that you have become infected: ",
+symptom1: "Fever",
+symptom2: "Cough",
+symptom3: "A headache",
+symptom4: "Shortness of breath",
+symptom5: "A dry throat",
+symptom6: "Chest pain",
+symptom7: "An increased heartrate",
+symptom8: "Kidney failure",
+symptom9: "Diarrhea",
+symptom10: "Indigestion",
 },
   de: {
       english: false,
@@ -407,6 +429,17 @@ Urheberrecht
 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
 Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 Quelle: https://www.e-recht24.de/impressum-generator.html
-`
+`,
+symptomText: "Folgende Symptome können ein Anzeigen dafür sein, dass Sie sich infiziert haben: ",
+symptom1: "Fieber",
+symptom2: "Husten",
+symptom3: "Kopfschmerzen",
+symptom4: "Kurzatmigkeit",
+symptom5: "ein trocker Hals",
+symptom6: "Schmerzen in der Brust",
+symptom7: "ein erhöhter Puls",
+symptom8: "Nierenversagen",
+symptom9: "Durchfall",
+symptom10: "Verdauungsstörungen",
   }
 });

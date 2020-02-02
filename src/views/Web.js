@@ -1,24 +1,28 @@
 import React, {Component} from 'react'
-import {StyleSheet, Dimensions, View} from 'react-native'
+import {StyleSheet, Dimensions, View, BackHandler} from 'react-native'
 import {WebView} from 'react-native-webview'
 export default class Web extends Component {
   componentDidMount () {
-        this.backHandler.remove();
-        this.backHandler = BackHandler.addEventListener(
-            'hardwareBackPress',
-            this.handleBackPress,
-        )
+    if (this.backHandler) this.backHandler.remove()
+    this.backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      this.handleBackPress,
+    )
+  }
+
+  componentWillUnmount () {
+    if (this.backHandler) this.backHandler.remove()
   }
 
   handleBackPress = () => {
-      this.webview.goBack();
+    this.webview.goBack()
   }
 
   render () {
     const {goBack, uri} = this.props
     return (
       <View style={styles.container}>
-        <WebView ref={ref => this.webview = ref} source={{uri}} />
+        <WebView ref={ref => (this.webview = ref)} source={{uri}} />
       </View>
     )
   }

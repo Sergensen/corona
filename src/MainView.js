@@ -110,15 +110,22 @@ export default class MainView extends Component {
 
   componentDidUpdate () {
     const {contentId} = this.state
+    const {home, reset} = this.props
+    
+    if (home) {
+      this.setState({contentId: 0})
+      reset()
+    }
+
     if (
       contentId === 2 ||
       contentId === 3 ||
       contentId === 4 ||
       contentId === 5
     ) {
-      this.backHandler.remove()
+      if (this.backHandler) this.backHandler.remove()
     } else {
-      this.backHandler.remove()
+      if (this.backHandler) this.backHandler.remove()
       this.backHandler = BackHandler.addEventListener(
         'hardwareBackPress',
         this.handleBackPress,
@@ -127,7 +134,7 @@ export default class MainView extends Component {
   }
 
   componentWillUnmount () {
-    this.backHandler.remove()
+    if (this.backHandler) this.backHandler.remove()
   }
 
   handleBackPress = () => {

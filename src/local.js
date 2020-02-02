@@ -6,6 +6,7 @@ import LocalizedStrings from 'react-native-localization';
 export let translate = new LocalizedStrings({
   "en-US": {
       privacyTitle: "Privacy policy",
+      legalTitle: "Legal notice",
       privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
 1. Basic information
 Unless otherwise stated in the following sections, no personal data is collected, processed or used when using our websites.
@@ -97,6 +98,7 @@ This Application uses Google, a third party vendor, to serve advertisements in t
 14. Contact details of the person responsible:
 info(at)eatingmuffin.net`},
   en: {
+      legalTitle: "Legal notice",
        privacyTitle: "Privacy policy",
       privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
 1. Basic information
@@ -187,9 +189,45 @@ E-Mail: info(at)eatingmuffin.net
 This Application uses Google, a third party vendor, to serve advertisements in the Application, using the AdMob system (see http://www.google.com/ads/admob/). By using the Application, you consent to the delivery of these advertisements and any data collected by Google, as per the Privacy Policy of AdMob (found at http://www.admob.com/home/privacy).
 
 14. Contact details of the person responsible:
-info(at)eatingmuffin.net`},
+info(at)eatingmuffin.net`,
+legalText: `
+Information according to the German § 5 telemedia-act
+
+Köthe und Sentürk GbR
+Edewechter Landstraße 70
+26131 Oldenburg
+Germany
+
+Represented by:
+Ilja Köthe, Sergen Sentürk
+
+Contact
+Phone: +49 1525 6537719
+E-Mail: info(at)richlist.net
+Due to the small settlement of the USTG (Sales tax law) section 19 par. 1 sales tax is not calculated.
+
+Dispute settlement
+The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr
+You can find our e-mail address in the imprint above.
+We are not prepared or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+
+Liability for content
+As a service provider we are responsible according to § 7 Abs.1 TMG (German Telemedia Act) for our own contents on these pages according to the general laws. According to §§ 8 to 10 TMG, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+Obligations to remove or block the use of information in accordance with general laws remain unaffected by this. A liability in this respect is however only possible from the time of knowledge of a concrete infringement. As soon as we become aware of such infringements, we will remove the content immediately.
+
+Liability for links
+Our offer contains links to external websites of third parties on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal infringements at the time of linking. Illegal contents were not recognisable at the time of linking.
+A permanent control of the contents of the linked pages is not reasonable without concrete evidence of an infringement. As soon as we become aware of any legal infringements, we will remove such links immediately.
+
+Copyright
+The contents and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.
+Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of any infringements, we will remove such content immediately.
+
+`
+},
   de: {
         privacyTitle: "Datenschutzerklärung",
+        legalTitle: "Impressum",
         privacyText1: ` Diese Datenschutz-Erklärung dient der Information darüber, welche Art von Daten erhoben, gespeichert und verarbeitet werden und der Schutz und die Sicherheit der personenbezogenen Daten gewährleistet wird. \n
 1. Grundsätzliche Information
 Soweit in den folgenden Abschnitten nicht anderweitig dargestellt, werden bei Nutzung unserer Webseiten grundsätzlich keine personenbezogenen Daten erhoben, verarbeitet oder genutzt.
@@ -280,6 +318,40 @@ E-Mail: info(at)eatingmuffin.net
 Für Werbeeinblendungen nutzen wir den Werbepartner AdMob Google Inc. Admob sammelt persönliche Daten wie Device IDs, GPS-Daten, demographische Daten u.a. um für Sie relevante Werbung anzeigen zu können. Alternativ können Sie auch nicht personalisierte Werbung angezeigt bekommen. Die Einstellungsmöglichkeit finden Sie im Hauptmenü der App unter "Datenschutz". Weitere Details zu den von Google Admob erhobenen Daten finden Sie in der Datenschutzerklärung von Google.
 
 15. Kontaktdaten des Verantwortlichen:
-info(at)eatingmuffin.net`
+info(at)eatingmuffin.net`,
+legalText: `
+Angaben gemäß § 5 TMG
+
+Köthe und Sentürk GbR
+Edewechter Landstraße 70
+26131 Oldenburg
+Deutschland
+
+Vertreten durch:
+Ilja Köthe, Sergen Sentürk
+
+Kontakt
+Telefon: +49 1525 6537719
+E-Mail: info(at)richlist.net
+Als Kleinunternehmer im Sinne von § 19 Abs. 1 Umsatzsteuergesetz (UStG) wird Umsatzsteuer nicht berechnet.
+
+Streitschlichtung
+Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr.
+Unsere E-Mail-Adresse finden Sie oben im Impressum.
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+Haftung für Inhalte
+Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+
+Haftung für Links
+Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+
+Urheberrecht
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+Quelle: https://www.e-recht24.de/impressum-generator.html
+`
   }
 });

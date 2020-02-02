@@ -24,42 +24,46 @@ export default class MainView extends Component {
     cards: [
       {
         contentId: 1,
-        title: "Live News",
-        imageUrl: require("../src/resources/images/BlurryNews2.jpg"),
-        component: <Web goBack={() => this.goBack()} key={0} id="news" uri={translate.english ? "https://news.google.com/search?q=coronavirus&hl=en-US&gl=US&ceid=US:en" : "https://news.google.com/search?q=coronavirus&hl=de&gl=DE&ceid=DE:de"} />
-      }, {
+        title: translate.titleTips,
+        imageUrl: require("../src/resources/images/BlurryTips.jpg"),
+        component: <Tips goBack={() => this.goBack()} key={0} />,
+      },
+      {
         contentId: 2,
-        title: "Flight Cancellation",        
-        imageUrl: require("../src/resources/images/BlurryFlight.jpg"),
-        component: <Web goBack={() => this.goBack()} key={1} id="flights" uri="https://flightaware.com/live/findflight/" />
+        title: translate.titleNews,
+        imageUrl: require("../src/resources/images/BlurryNews.jpg"),
+        component: <Web goBack={() => this.goBack()} key={1} id="news" uri="https://news.google.com/search?q=coronavirus" />
       }, {
         contentId: 3,
-        title: "General Information",
-        imageUrl: require("../src/resources/images/BlurryWikipedia.jpg"),
-        component: <Web goBack={() => this.goBack()} key={2} id="infos" uri={"https://" + (translate.english ? "en" : "de") + ".wikipedia.org/wiki/Coronaviridae"} />
-      }, {
-        contentId: 4,
-        title: "Live Map",
+        title: translate.titleMap,
         imageUrl: require("../src/resources/images/BlurryLiveMap.jpg"),
-        component: <Web goBack={() => this.goBack()} key={3} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
+        component: <Web goBack={() => this.goBack()} key={2} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
+      },      
+      {
+        contentId: 4,
+        title: translate.titleFlights,        
+        imageUrl: require("../src/resources/images/BlurryFlight.jpg"),
+        component: <Web goBack={() => this.goBack()} key={3} id="flights" uri="https://flightaware.com/live/findflight/" />
       }, {
         contentId: 5,
-        title: "General Tips",
-        imageUrl: require("../src/resources/images/BlurryTips.jpg"),
-        component: <Tips goBack={() => this.goBack()} key={4} />,
-      }, {
+        title: translate.titleInfo,
+        imageUrl: require("../src/resources/images/BlurryWikipedia.jpg"),
+        component: <Web goBack={() => this.goBack()} key={4} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
+      }, 
+      {
         contentId: 6,
-        title: "Symptoms",
-        imageUrl: require("../src/resources/images/BlurrySymptoms2.jpg"),
+        title: translate.titleSymptoms,
+        imageUrl: require("../src/resources/images/BlurrySymptoms.jpg"),
         component: <Symptoms goBack={() => this.goBack()} key={5} />
-      }, {
+      },      
+       {
         contentId: 7,
-        title: "Legal",
+        title: translate.legalTitle,
         imageUrl: "",
         component: <Legal goBack={() => this.goBack()} key={6} />,
       }, {
         contentId: 8,
-        title: "Privacy",
+        title: translate.privacyTitle,
         imageUrl: "",
         component: <Privacy goBack={() => this.goBack()} key={7} />
       }
@@ -98,7 +102,11 @@ export default class MainView extends Component {
           <View key={contentId+title} style={styles.elementContainer}>
           <View 
           // source={imageUrl} 
-          style={styles.imageBackgroundContainer} resizeMode="cover">
+          style={styles.imageBackgroundContainer} >
+            
+            <View style={styles.cardImageContainer}>
+              <Image style={styles.cardImage} source={imageUrl} />
+            </View>
             <ListItem
               Component={TouchableOpacity}
               key={contentId}
@@ -111,11 +119,10 @@ export default class MainView extends Component {
               containerStyle= {styles.containerStyle}
               contentContainerStyle={styles.contentContainerStyle}
             />
+            
+            
           </View>
 
-          <View style={styles.cardImageContainer}>
-            <Image style={styles.cardImage} source={imageUrl} />
-          </View>
 
           </View>
         ))}
@@ -143,20 +150,27 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     // alignItems: "center",
     // justifyContent: "center",
-    // backgroundColor: "yellow", 
+    backgroundColor: "yellow", 
     elevation: 5
 
   },
   imageBackgroundContainer:{
+    flexDirection: "row",
     width: "100%", 
     height: "100%",
     backgroundColor: "white"
   },
   card: {
-    // backgroundColor: 'green',
-    // width: '90%',
+    // flex: 8,
+    backgroundColor: 'white',
+    position: "absolute",
+    left: 0,
+    width: '80%',
     height: "100%",
-    width: "100%",
+    borderRadius: 15,
+    elevation: 15
+    // height: "100%",
+    // width: "100%",
     // margin: '2.5% 5%',
   },
   itemTitle:{
@@ -170,18 +184,22 @@ const styles = StyleSheet.create({
   containerStyle:{
     backgroundColor: null,
     height: "100%", 
-    width: "100%"
+    width: "100%",
+    // backgroundColor: "green"
   },
   contentContainerStyle:{
     height: "100%", 
     width: "100%", 
     justifyContent: "center", 
-    alignItems: "center"
+    alignItems: "flex-start",
+    // backgroundColor: "green"
+
   },
   cardImageContainer:{
+    // flex: 2,
     position: "absolute",
     right: 0,
-    width: "20%",
+    width: "25%",
     height: "100%",
   },
   cardImage:{

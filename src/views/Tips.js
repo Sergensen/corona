@@ -29,7 +29,7 @@ export default class Tips extends Component {
         ],
       },
       {
-        title: 'Shopping & Working',
+        title: 'Shopping & Working in China',
         images: [
           require('../resources/images/tips/blue-8.png'),
           require('../resources/images/tips/blue-9.png'),
@@ -47,11 +47,37 @@ export default class Tips extends Component {
         ],
       },
     ],
-    german: [],
+    german: [
+      {
+        title: 'Hände waschen',
+        text: 'Sie sollten Ihre Hände mindestens 30 Sekunden mit Seife und Wasser abwaschen. Gehen Sie sicher, dass Sie Ihre Hände richtig abtrocknen. Waschen Sie sie regelmäßig. Sie können auch ein Desinfektionsmittel benutzen.',
+        image: require('../resources/images/tips/blue-1.png'),
+      },
+      {
+        title: 'Andere schützen',
+        text: 'Niesen und husten Sie nur in die Armbeuge und achten Sie darauf, dass sie Taschentücher nicht mehrmals benutzen. Wenn Sie typische Symptome verspüren und in letzter Zeit in China waren oder mit Personen in Kontakt waren, die vor kurzer Zeit in China waren, sollten Sie einen Arzt aufsuchen.',
+        image: require('../resources/images/tips/blue-3.png'),
+      },
+      {
+        title: 'Nahrungsmittel',
+        text: 'Waschen Sie Geschirr, das mit rohem Fleisch in Kontakt war sofort ab. Behandeln Sie genau so Ihre Hände.',
+        image: require('../resources/images/tips/blue-5.png'),
+      },
+      {
+        title: 'Shoppen und arbeiten in China',
+        text: '',
+        image: require('../resources/images/tips/blue-8.png'),
+      },
+      {
+        title: 'Reisen',
+        text: '',
+        image: require('../resources/images/tips/1.png'),
+      },
+    ],
   }
   render () {
     const {english, german} = this.state
-    if (translate.english) {
+    if (!translate.english) {
       return (
         <ScrollView style={styles.container}>
           {english.map(section => (
@@ -61,7 +87,12 @@ export default class Tips extends Component {
               </Text>
               {section.images.map(uri => (
                 <View style={styles.imageContainer}>
-                    <Image resizeMode="cover" style={styles.image} key={uri} source={uri} />
+                  <Image
+                    resizeMode='cover'
+                    style={styles.image}
+                    key={uri}
+                    source={uri}
+                  />
                 </View>
               ))}
             </View>
@@ -71,36 +102,53 @@ export default class Tips extends Component {
     } else {
       return (
         <ScrollView style={styles.container}>
-          <Text h1>Tips</Text>
-          <Text h4>Tips</Text>
+          {german.map(section => (
+            <View style={styles.section}>
+              <Text h3 style={styles.titleText}>
+                {section.title}
+              </Text>
+              <Text style={styles.textText} h4>{section.text}</Text>
+              <View style={styles.imageContainer}>
+                <Image
+                  resizeMode='cover'
+                  style={styles.image}
+                  key={section.image}
+                  source={section.image}
+                />
+              </View>
+            </View>
+          ))}
         </ScrollView>
       )
     }
   }
 }
 
-const imageSize = Dimensions.get('window').width * 0.9;
+const imageSize = Dimensions.get('window').width * 0.9
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        height: "90%",
-        // paddingTop: '2.5%',
-        backgroundColor: 'rgba(255,255,255, 0.9)',
-    },
-    section: {
-        justifyContent: "center",
-        alignItems: "center"
-
-    },
-    titleText:{
-      paddingBottom: 10
-    },
-    imageContainer: {
-      paddingBottom: 20
-    },
-    image: {
-        width: imageSize,
-        height: imageSize,
-    },
+  container: {
+    width: '100%',
+    height: '90%',
+    // paddingTop: '2.5%',
+    backgroundColor: 'rgba(255,255,255, 0.9)',
+  },
+  section: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  titleText: {
+    paddingBottom: 10,
+  },
+  textText: {
+      marginLeft: 20,
+      marginRight: 20,
+  },
+  imageContainer: {
+    paddingBottom: 20,
+  },
+  image: {
+    width: imageSize,
+    height: imageSize,
+  },
 })

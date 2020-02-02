@@ -16,6 +16,7 @@ import Symptoms from './views/Symptoms';
 import Legal from './views/Legal';
 import Privacy from './views/Privacy';
 import image from "../src/resources/images/BlurryFlight.jpg"
+import { translate } from './local';
 
 export default class MainView extends Component {
   state = {
@@ -24,46 +25,46 @@ export default class MainView extends Component {
     cards: [
       {
         contentId: 1,
-        title: "General Tips",
+        title: translate.titleTips,
         imageUrl: require("../src/resources/images/BlurryTips.jpg"),
-        component: <Tips goBack={() => this.goBack()} key={4} />,
+        component: <Tips goBack={() => this.goBack()} key={0} />,
       },
       {
         contentId: 2,
-        title: "Live News",
+        title: translate.titleNews,
         imageUrl: require("../src/resources/images/BlurryNews.jpg"),
-        component: <Web goBack={() => this.goBack()} key={0} id="news" uri="https://news.google.com/search?q=coronavirus" />
+        component: <Web goBack={() => this.goBack()} key={1} id="news" uri="https://news.google.com/search?q=coronavirus" />
       }, {
         contentId: 3,
-        title: "Live Map",
+        title: translate.titleMap,
         imageUrl: require("../src/resources/images/BlurryLiveMap.jpg"),
-        component: <Web goBack={() => this.goBack()} key={3} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
+        component: <Web goBack={() => this.goBack()} key={2} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
       },      
       {
         contentId: 4,
-        title: "Flight Cancellation",        
+        title: translate.titleFlights,        
         imageUrl: require("../src/resources/images/BlurryFlight.jpg"),
-        component: <Web goBack={() => this.goBack()} key={1} id="flights" uri="https://flightaware.com/live/findflight/" />
+        component: <Web goBack={() => this.goBack()} key={3} id="flights" uri="https://flightaware.com/live/findflight/" />
       }, {
         contentId: 5,
-        title: "General Information",
+        title: translate.titleInfo,
         imageUrl: require("../src/resources/images/BlurryWikipedia.jpg"),
-        component: <Web goBack={() => this.goBack()} key={2} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
+        component: <Web goBack={() => this.goBack()} key={4} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
       }, 
       {
         contentId: 6,
-        title: "Symptoms",
+        title: translate.titleSymptoms,
         imageUrl: require("../src/resources/images/BlurrySymptoms.jpg"),
         component: <Symptoms goBack={() => this.goBack()} key={5} />
       },      
        {
         contentId: 7,
-        title: "Legal",
+        title: translate.legalTitle,
         imageUrl: "",
         component: <Legal goBack={() => this.goBack()} key={6} />,
       }, {
         contentId: 8,
-        title: "Privacy",
+        title: translate.privacyTitle,
         imageUrl: "",
         component: <Privacy goBack={() => this.goBack()} key={7} />
       }

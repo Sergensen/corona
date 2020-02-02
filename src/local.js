@@ -5,6 +5,12 @@ import LocalizedStrings from 'react-native-localization';
 
 export let translate = new LocalizedStrings({
   "en-US": {
+      titleTips: "General Tips",
+      titleNews: "Live News",
+      titleMap: "Live Map",
+      titleFlights: "Cancelled Flights",
+      titleInfo: "General Information",
+      titleSymptoms: "Symptoms",
       privacyTitle: "Privacy policy",
       legalTitle: "Legal notice",
       privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
@@ -98,8 +104,14 @@ This Application uses Google, a third party vendor, to serve advertisements in t
 14. Contact details of the person responsible:
 info(at)eatingmuffin.net`},
   en: {
+      titleTips: "General Tips",
+      titleNews: "Live News",
+      titleMap: "Live Map",
+      titleFlights: "Cancelled Flights",
+      titleInfo: "General Information",
+      titleSymptoms: "Symptoms",
       legalTitle: "Legal notice",
-       privacyTitle: "Privacy policy",
+      privacyTitle: "Privacy policy",
       privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
 1. Basic information
 Unless otherwise stated in the following sections, no personal data is collected, processed or used when using our websites.
@@ -226,6 +238,12 @@ Insofar as the content on this site was not created by the operator, the copyrig
 `
 },
   de: {
+        titleTips: "Allgemeine Tipps",
+        titleNews: "Live Nachrichten",
+        titleMap: "Live Karte",
+        titleFlights: "Gestrichene Flüge",
+        titleInfo: "Informationen",
+        titleSymptoms: "Symptome",
         privacyTitle: "Datenschutzerklärung",
         legalTitle: "Impressum",
         privacyText1: ` Diese Datenschutz-Erklärung dient der Information darüber, welche Art von Daten erhoben, gespeichert und verarbeitet werden und der Schutz und die Sicherheit der personenbezogenen Daten gewährleistet wird. \n

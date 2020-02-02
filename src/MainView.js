@@ -60,7 +60,7 @@ export default class MainView extends Component {
           <Web
             key={3}
             id='flights'
-            uri='https://flightaware.com/live/findflight/'
+            uri={translate.english ? 'https://flightaware.com/live/findflight/' : "https://de.flightaware.com/live/findflight/"}
           />
         ),
       },

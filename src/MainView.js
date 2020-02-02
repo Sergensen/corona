@@ -95,7 +95,7 @@ export default class MainView extends Component {
     return contentId === 0 ? (
       <ScrollView contentContainerStyle={styles.container} >
         {cards.map(({ contentId, imageUrl, title }) => (
-          <View style={styles.elementContainer}>
+          <View key={contentId+title} style={styles.elementContainer}>
           <ImageBackground 
           // source={{uri: "" + imageUrl}} 
           source={imageUrl} 

@@ -29,37 +29,37 @@ export default class MainView extends Component {
         component: <Web goBack={() => this.goBack()} key={0} id="news" uri="https://news.google.com/search?q=coronavirus" />
       }, {
         contentId: 2,
-        title: "Flight Cancalation",        
+        title: "Flight Cancellation",        
         imageUrl: require("../src/resources/images/BlurryFlight.jpg"),
         component: <Web goBack={() => this.goBack()} key={1} id="flights" uri="https://flightaware.com/live/findflight/" />
       }, {
         contentId: 3,
-        title: "a",
+        title: "General Information",
         imageUrl: require("../src/resources/images/BlurryWikipedia.jpg"),
         component: <Web goBack={() => this.goBack()} key={2} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
       }, {
         contentId: 4,
-        title: "a",
+        title: "Live Map",
         imageUrl: require("../src/resources/images/BlurryLiveMap.jpg"),
         component: <Web goBack={() => this.goBack()} key={3} id="livemap" uri="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" />
       }, {
         contentId: 5,
-        title: "a",
+        title: "General Tips",
         imageUrl: require("../src/resources/images/BlurryTips.jpg"),
         component: <Tips goBack={() => this.goBack()} key={4} />,
       }, {
         contentId: 6,
-        title: "a",
+        title: "Symptoms",
         imageUrl: require("../src/resources/images/BlurrySymptoms2.jpg"),
         component: <Symptoms goBack={() => this.goBack()} key={5} />
       }, {
         contentId: 7,
-        title: "a",
+        title: "Legal",
         imageUrl: "",
         component: <Legal goBack={() => this.goBack()} key={6} />,
       }, {
         contentId: 8,
-        title: "a",
+        title: "Privacy",
         imageUrl: "",
         component: <Privacy goBack={() => this.goBack()} key={7} />
       }
@@ -142,7 +142,9 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     // alignItems: "center",
     // justifyContent: "center",
-    // backgroundColor: "yellow",   
+    // backgroundColor: "yellow", 
+    elevation: 5
+
   },
   imageBackgroundContainer:{
     width: "100%", 
@@ -159,7 +161,10 @@ const styles = StyleSheet.create({
   itemTitle:{
     color: "white",
     fontWeight: "bold",
-    fontSize: 25
+    fontSize: 25,
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
   },
   containerStyle:{
     backgroundColor: null,

@@ -56,12 +56,12 @@ export default class Tips extends Component {
         <ScrollView style={styles.container}>
           {english.map(section => (
             <View style={styles.section}>
-              <Text h4>
+              <Text h4 style={styles.titleText}>
                 {section.title}
               </Text>
               {section.images.map(uri => (
                 <View style={styles.imageContainer}>
-                    <Image resizeMode="contain" style={styles.image} key={uri} source={uri} />
+                    <Image resizeMode="cover" style={styles.image} key={uri} source={uri} />
                 </View>
               ))}
             </View>
@@ -79,21 +79,28 @@ export default class Tips extends Component {
   }
 }
 
+const imageSize = Dimensions.get('window').width * 0.9;
+
 const styles = StyleSheet.create({
-    section: {
-    },
-    imageContainer: {
-        width: "100%",
-        marginTop: 10
-    },
     container: {
         width: '100%',
-        padding: '5%',
-        paddingTop: '2.5%',
-        backgroundColor: 'rgba(255,255,255,0.75)'
+        height: "90%",
+        // paddingTop: '2.5%',
+        backgroundColor: 'rgba(255,255,255, 0.9)',
+    },
+    section: {
+        justifyContent: "center",
+        alignItems: "center"
+
+    },
+    titleText:{
+      paddingBottom: 10
+    },
+    imageContainer: {
+      paddingBottom: 20
     },
     image: {
-        width: '100%',
-        height: '100%',
+        width: imageSize,
+        height: imageSize,
     },
 })

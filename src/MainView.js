@@ -133,7 +133,9 @@ export default class MainView extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    // height: "100%",
+    // display: 'flex',
+    // height: ,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',

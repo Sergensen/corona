@@ -25,15 +25,19 @@ export default class Symptoms extends Component {
             {
                 this.getElements()
             }
-            <Image
-                resizeMode='contain'
-                style={styles.image}
-                source={require('../resources/images/tips/blue-3.png')}
-            />
+            <View style={styles.imageContainer}>
+                <Image
+                    resizeMode='contain'
+                    style={styles.image}
+                    source={require('../resources/images/tips/blue-3.png')}
+                />
+            </View>
       </ScrollView>
     );
   }
 };
+
+const imageSize = Dimensions.get('window').width * 0.9
 
 const styles = StyleSheet.create({
     subTitle: {
@@ -45,7 +49,8 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: "5%",
         paddingTop: "2.5%",
-        height: Dimensions.get('screen').height*0.9,
+        // height: Dimensions.get('screen').height*0.9,
+        height: "90%",
         backgroundColor: "rgba(255, 255, 255, 0.9)",
         paddingBottom: "20%"
     },
@@ -56,7 +61,12 @@ const styles = StyleSheet.create({
         marginLeft: 10
     },
     image: {
-        width: Dimensions.get('screen').width*0.9,
-        height: Dimensions.get('screen').width*0.9,
-    }
+        width: imageSize,
+        height: imageSize,
+    },
+    imageContainer: {
+        marginTop: 10,
+        paddingBottom: 20,
+    },
+
 });

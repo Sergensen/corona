@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.cvi"
+        applicationId "com.Coronavirus"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

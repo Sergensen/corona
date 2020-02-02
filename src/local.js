@@ -5,9 +5,10 @@ import LocalizedStrings from 'react-native-localization';
 
 export let translate = new LocalizedStrings({
   "en-US": {
+      english: true,
       privacyTitle: "Privacy policy",
       legalTitle: "Legal notice",
-      privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
+      privacyText: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
 1. Basic information
 Unless otherwise stated in the following sections, no personal data is collected, processed or used when using our websites.
 When you access our Internet pages, our Web servers automatically collect general information. This includes the type of web browser, the operating system used, the domain name of the Internet service provider, the IP address of the computer used, the website from which you visit us, the pages you visit on our site and the date and duration of your visit.
@@ -52,8 +53,8 @@ Further information can be found at https://www.google.de/intl/en/policies/ and 
 
 9. Social Networks
 Social plugins of the social networks Facebook, Twitter and Instagram are integrated on our website. The plugins are integrated on our website by means of the symbol of the respective network and the name, only as a link to the corresponding service. After clicking on the integrated graphic you will be redirected to the provider’s page, i.e. only then will user information be transferred to the provider if necessary. If you click on the link of a service under the text line “Follow us”, you can follow our activities on the respective platform. We have no influence on the collection, processing and use of data from the respective networks. Please refer to the data protection regulations of the respective networks for information on the handling of your personal data when using these websites.
-`,
-privacyText2: `10. Data security
+
+10. Data security
 We use technical and organizational security measures to protect your data managed by us against accidental or intentional manipulation, loss, destruction or access by unauthorized persons. Our security measures are continuously improved in line with technological developments.
 If personal data are processed by you, you are affected in the sense of GDPR and you have the following rights against the person responsible:
 Right to information under Article 15 GDPR
@@ -96,11 +97,45 @@ E-Mail: info(at)eatingmuffin.net
 This Application uses Google, a third party vendor, to serve advertisements in the Application, using the AdMob system (see http://www.google.com/ads/admob/). By using the Application, you consent to the delivery of these advertisements and any data collected by Google, as per the Privacy Policy of AdMob (found at http://www.admob.com/home/privacy).
 
 14. Contact details of the person responsible:
-info(at)eatingmuffin.net`},
+info(at)eatingmuffin.net`,
+legalText: `
+Information according to the German § 5 telemedia-act
+
+Köthe und Sentürk GbR
+Edewechter Landstraße 70
+26131 Oldenburg
+Germany
+
+Represented by:
+Ilja Köthe, Sergen Sentürk
+
+Contact
+Phone: +49 1525 6537719
+E-Mail: info(at)richlist.net
+Due to the small settlement of the USTG (Sales tax law) section 19 par. 1 sales tax is not calculated.
+
+Dispute settlement
+The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr
+You can find our e-mail address in the imprint above.
+We are not prepared or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+
+Liability for content
+As a service provider we are responsible according to § 7 Abs.1 TMG (German Telemedia Act) for our own contents on these pages according to the general laws. According to §§ 8 to 10 TMG, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+Obligations to remove or block the use of information in accordance with general laws remain unaffected by this. A liability in this respect is however only possible from the time of knowledge of a concrete infringement. As soon as we become aware of such infringements, we will remove the content immediately.
+
+Liability for links
+Our offer contains links to external websites of third parties on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal infringements at the time of linking. Illegal contents were not recognisable at the time of linking.
+A permanent control of the contents of the linked pages is not reasonable without concrete evidence of an infringement. As soon as we become aware of any legal infringements, we will remove such links immediately.
+
+Copyright
+The contents and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.
+Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of any infringements, we will remove such content immediately.
+`},
   en: {
+      english: true,
       legalTitle: "Legal notice",
        privacyTitle: "Privacy policy",
-      privacyText1: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
+      privacyText: `This data protection declaration serves to provide information on the type of data collected, stored and processed and on how the protection and security of personal data works.\n
 1. Basic information
 Unless otherwise stated in the following sections, no personal data is collected, processed or used when using our websites.
 When you access our Internet pages, our Web servers automatically collect general information. This includes the type of web browser, the operating system used, the domain name of the Internet service provider, the IP address of the computer used, the website from which you visit us, the pages you visit on our site and the date and duration of your visit.
@@ -145,8 +180,8 @@ Further information can be found at https://www.google.de/intl/en/policies/ and 
 
 9. Social Networks
 Social plugins of the social networks Facebook, Twitter and Instagram are integrated on our website. The plugins are integrated on our website by means of the symbol of the respective network and the name, only as a link to the corresponding service. After clicking on the integrated graphic you will be redirected to the provider’s page, i.e. only then will user information be transferred to the provider if necessary. If you click on the link of a service under the text line “Follow us”, you can follow our activities on the respective platform. We have no influence on the collection, processing and use of data from the respective networks. Please refer to the data protection regulations of the respective networks for information on the handling of your personal data when using these websites.
-`,
-privacyText2: `10. Data security
+
+10. Data security
 We use technical and organizational security measures to protect your data managed by us against accidental or intentional manipulation, loss, destruction or access by unauthorized persons. Our security measures are continuously improved in line with technological developments.
 If personal data are processed by you, you are affected in the sense of GDPR and you have the following rights against the person responsible:
 Right to information under Article 15 GDPR
@@ -226,9 +261,10 @@ Insofar as the content on this site was not created by the operator, the copyrig
 `
 },
   de: {
+      english: false,
         privacyTitle: "Datenschutzerklärung",
         legalTitle: "Impressum",
-        privacyText1: ` Diese Datenschutz-Erklärung dient der Information darüber, welche Art von Daten erhoben, gespeichert und verarbeitet werden und der Schutz und die Sicherheit der personenbezogenen Daten gewährleistet wird. \n
+        privacyText: ` Diese Datenschutz-Erklärung dient der Information darüber, welche Art von Daten erhoben, gespeichert und verarbeitet werden und der Schutz und die Sicherheit der personenbezogenen Daten gewährleistet wird. \n
 1. Grundsätzliche Information
 Soweit in den folgenden Abschnitten nicht anderweitig dargestellt, werden bei Nutzung unserer Webseiten grundsätzlich keine personenbezogenen Daten erhoben, verarbeitet oder genutzt.
 Wenn Sie auf unsere Internetseiten zugreifen, erfassen unsere Web-Server automatisch Informationen allgemeiner Natur. Dazu gehören die Art des Webbrowsers, das verwendete Betriebssystem, der Domainname des Internet Service Providers, die IP-Adresse des verwendeten Computers, die Webseite, von der aus Sie uns besuchen, die Seiten, die Sie bei uns besuchen sowie das Datum und die Dauer des Besuches.
@@ -269,8 +305,7 @@ Diese Webseite verwendet Google Analytics der Firma Google Ireland Limited (Gord
 Bitte beachten Sie auch die nachfolgenden Informationen zum Einsatz von Google Analytics:
 Google Analytics verwendet Cookies, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Webseite durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Webseite werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Durch Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Webseite wird Google diese Informationen benutzen, um Ihre Nutzung der Webseite auszuwerten, um Reports über die Webseitenaktivitäten zusammenzustellen und um weitere mit der Webseitennutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Webseitenbetreiber zu erbringen.
 Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Webseite vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Webseite bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren.
-`,
-privacyText2: `
+
 Sie können alternativ die Erfassung durch Google Analytics auch verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website verhindert: Google Analytics deaktivieren. Das Opt-Out-Cookie gilt nur für diesen Browser und auch nur für diese Domain. Löschen Sie Ihre Cookies in diesem Browser, müssen Sie diesen Link erneut klicken.
 Nähere Informationen hierzu finden Sie unter https://www.google.de/intl/de/policies/ sowie in der Datenschutzerklärung von Google.
 

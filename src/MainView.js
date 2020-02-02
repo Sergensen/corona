@@ -9,7 +9,7 @@ import {
   TouchableOpacity
 } from 'react-native'
 import { ListItem, Text, Button } from 'react-native-elements'
-
+import { translate } from './local';
 import Web from './views/Web';
 import Tips from './views/Tips';
 import Symptoms from './views/Symptoms';
@@ -26,7 +26,7 @@ export default class MainView extends Component {
         contentId: 1,
         title: "Live News",
         imageUrl: require("../src/resources/images/BlurryNews2.jpg"),
-        component: <Web goBack={() => this.goBack()} key={0} id="news" uri="https://news.google.com/search?q=coronavirus" />
+        component: <Web goBack={() => this.goBack()} key={0} id="news" uri={translate.english ? "https://news.google.com/search?q=coronavirus&hl=en-US&gl=US&ceid=US:en" : "https://news.google.com/search?q=coronavirus&hl=de&gl=DE&ceid=DE:de"} />
       }, {
         contentId: 2,
         title: "Flight Cancellation",        
@@ -36,7 +36,7 @@ export default class MainView extends Component {
         contentId: 3,
         title: "General Information",
         imageUrl: require("../src/resources/images/BlurryWikipedia.jpg"),
-        component: <Web goBack={() => this.goBack()} key={2} id="infos" uri="https://de.wikipedia.org/wiki/Coronaviridae" />
+        component: <Web goBack={() => this.goBack()} key={2} id="infos" uri={"https://" + (translate.english ? "en" : "de") + ".wikipedia.org/wiki/Coronaviridae"} />
       }, {
         contentId: 4,
         title: "Live Map",

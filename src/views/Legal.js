@@ -1,27 +1,24 @@
-import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Dimensions } from 'react-native';
-import { Text } from 'react-native-elements';
-import { translate } from '../local';
+import React, {Component} from 'react'
+import {ScrollView, StyleSheet, Dimensions} from 'react-native'
+import {Text} from 'react-native-elements'
+import {translate} from '../local'
 
 export default class Legal extends Component {
-render() {
+  render () {
     return (
       <ScrollView style={styles.container}>
-        <Text h3>{translate.legalTitle}</Text>
-        <Text style={styles.text}>{translate.legalText}</Text>
+        <Text h2>{translate.legalTitle}</Text>
+        <Text h4>{translate.legalText}</Text>
       </ScrollView>
-    );
+    )
   }
-};
+}
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        height: Dimensions.get('screen').height,
-        padding: "5%",
-        paddingTop: "2.5%"
-    },
-    text: {
-        height: 2*Dimensions.get('screen').height,
-    },
-});
+  container: {
+    width: '100%',
+    padding: '5%',
+    paddingTop: '2.5%',
+    backgroundColor: 'rgba(255,255,255,0.75)',
+  },
+})

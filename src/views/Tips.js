@@ -60,19 +60,14 @@ export default class Tips extends Component {
       },
       {
         title: 'Nahrungsmittel',
-        text: 'Waschen Sie Geschirr, das mit rohem Fleisch in Kontakt war sofort ab. Behandeln Sie genau so Ihre Hände.',
+        text: 'Waschen Sie Geschirr, das mit rohem Fleisch in Kontakt war sofort ab. Behandeln Sie genau so Ihre Hände. Verzehren Sie kein Fleisch von Tieren, die an einer Krankheit gestorben sind. Verzehren Sie außerdem kein rohes Fleisch.',
         image: require('../resources/images/tips/blue-5.png'),
       },
       {
         title: 'Shoppen und arbeiten in China',
-        text: '',
+        text: 'Vermeiden Sie Kontakt mit Tieren und Menschen. Probieren Sie im besten Fall auch keine Kleidung an. Waschen Sie auch hier regelmäßig Ihre Hände und tragen Sie Handschuhe, wenn Sie sich in der Öffentlichkeit befinden.',
         image: require('../resources/images/tips/blue-8.png'),
-      },
-      {
-        title: 'Reisen',
-        text: '',
-        image: require('../resources/images/tips/1.png'),
-      },
+      }
     ],
   }
   render () {

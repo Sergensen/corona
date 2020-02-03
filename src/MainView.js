@@ -16,6 +16,9 @@ import Symptoms from './views/Symptoms'
 import Legal from './views/Legal'
 import Privacy from './views/Privacy'
 import image from '../src/resources/images/BlurryFlight.jpg'
+import {
+  AdMobInterstitial
+} from 'react-native-admob'
 
 export default class MainView extends Component {
   state = {
@@ -101,7 +104,12 @@ export default class MainView extends Component {
     this.backHandler = BackHandler.addEventListener(
       'hardwareBackPress',
       this.handleBackPress,
-    )
+    );
+
+    // Display an interstitial
+    // AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
+    AdMobInterstitial.setAdUnitID('ca-app-pub-5033680827220523/6048715401');
+    // AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
   }
 
   componentDidUpdate () {
@@ -145,8 +153,9 @@ export default class MainView extends Component {
                     Component={TouchableOpacity}
                     key={contentId}
                     style={styles.card}
-                    onPress={() => {
-                    this.setState({contentId})
+                    onPress={() => {          
+                      AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+                      this.setState({contentId})
                     }}
                     title={title}
                     titleStyle={styles.itemTitle}
@@ -169,7 +178,7 @@ export default class MainView extends Component {
 const styles = StyleSheet.create({
   mainViewContainer:{
     width: "100%",
-    height: Dimensions.get('screen').height * 0.9 - 100,
+    height: Dimensions.get('screen').height * 0.9 - 50,
   },
   container: {
     // display: 'flex',

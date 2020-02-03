@@ -72,7 +72,7 @@ export default class MainView extends Component {
           <Web
             key={4}
             id='infos'
-            uri={'https://'+ translate.english ? 'en' : "de" +'.wikipedia.org/wiki/Coronaviridae'}
+            uri={'https://'+ (translate.english ? 'en' : "de") + '.wikipedia.org/wiki/Coronaviridae'}
           />
         ),
       },
@@ -130,7 +130,8 @@ export default class MainView extends Component {
 
   render () {
     const {contentId, cards} = this.state
-    return contentId === 0 ? (
+    return <View style={styles.mainViewContainer}>    
+    {contentId === 0 ? (      
       <ScrollView contentContainerStyle={styles.container}>
             {cards.map(({contentId, imageUrl, title}) => (
             <View key={contentId + title} style={styles.elementContainer}>
@@ -155,15 +156,21 @@ export default class MainView extends Component {
                 </View>
             </View>
             ))}
-            <View style={{height: Dimensions.get('screen').height * 0.125}} key={8} />
+            {/* <View style={{height: Dimensions.get('screen').height * 0.125}} key={8} /> */}
       </ScrollView>
+      
     ) : (
       cards.find(card => card.contentId === contentId).component
-    )
+    )}
+    </View>
   }
 }
 
 const styles = StyleSheet.create({
+  mainViewContainer:{
+    width: "100%",
+    height: Dimensions.get('screen').height * 0.9 - 100,
+  },
   container: {
     // display: 'flex',
     // height: ,

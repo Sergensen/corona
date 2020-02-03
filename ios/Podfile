@@ -38,6 +38,8 @@ target 'cvi' do
 
   pod 'ReactNativeLocalization', :path => '../node_modules/react-native-localization'
 
+  pod 'react-native-admob', :path => '../node_modules/react-native-admob'
+
   target 'cviTests' do
     inherit! :search_paths
     # Pods for testing

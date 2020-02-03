@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.Coronavirus"
+        applicationId "com.cvi"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -179,6 +179,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-admob')
     implementation project(':react-native-localization')
     implementation project(':react-native-webview')
     implementation fileTree(dir: "libs", include: ["*.jar"])

@@ -36,7 +36,8 @@ export default class Web extends Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: Dimensions.get('window').height * 0.9,
+    // height: Dimensions.get('window').height * 0.9 - 100,
+    height: "100%",
     backgroundColor: "rgba(255, 255, 255, 0.75)"
   },
   loading: {

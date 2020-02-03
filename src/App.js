@@ -13,6 +13,10 @@ import Header from './Header'
 import MainView from './MainView'
 import HeaderImage from '../src/resources/images/HeaderBackgroundBlurry.png'
 import BubbleImage from '../src/resources/images/Bubbles.png'
+import {
+  AdMobBanner
+} from 'react-native-admob'
+
 
 export default class App extends Component {
     state = {
@@ -45,8 +49,18 @@ export default class App extends Component {
           />
         </View>
         <SafeAreaView>
-          <Header reset={this.reset.bind(this)} />
+        
+          <Header reset={this.reset.bind(this)} />          
           <MainView reset={this.reset.bind(this)} home={home} />
+          <View style={styles.adContainer}>
+            <AdMobBanner
+            adSize="largeBanner"
+            adUnitID="ca-app-pub-5033680827220523/5126214658"
+            onAdFailedToLoad={error => console.error(error)}
+            /> 
+          </View>  
+          
+          
         </SafeAreaView>
       </View>
     )
@@ -77,5 +91,10 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     // marginLeft: "7.5%",
   },
+  adContainer:{
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 })
 

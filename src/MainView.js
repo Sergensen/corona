@@ -36,7 +36,7 @@ export default class MainView extends Component {
           <Web
             key={1}
             id='news'
-            uri={translate.english ? "https://news.google.com/search?q=coronavirus&hl=en-US&gl=US" : 'https://news.google.com/search?q=corona%20vireus&hl=de&gl=DE&ceid=DE%3Ade'}
+            uri={translate.english === "true"? "https://news.google.com/search?q=coronavirus&hl=en-US&gl=US" : 'https://news.google.com/search?q=corona%20vireus&hl=de&gl=DE&ceid=DE%3Ade'}
           />
         ),
       },
@@ -60,7 +60,7 @@ export default class MainView extends Component {
           <Web
             key={3}
             id='flights'
-            uri={translate.english ? 'https://flightaware.com/live/findflight/' : "https://de.flightaware.com/live/findflight/"}
+            uri={translate.english === "true" ? 'https://flightaware.com/live/findflight/' : "https://de.flightaware.com/live/findflight/"}
           />
         ),
       },
@@ -72,7 +72,7 @@ export default class MainView extends Component {
           <Web
             key={4}
             id='infos'
-            uri={'https://'+ (translate.english ? 'en' : "de") + '.wikipedia.org/wiki/Coronaviridae'}
+            uri={'https://'+ (translate.english === "true" ? 'en' : "de") + '.wikipedia.org/wiki/Coronaviridae'}
           />
         ),
       },

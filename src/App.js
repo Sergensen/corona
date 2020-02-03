@@ -55,7 +55,8 @@ export default class App extends Component {
           <View style={styles.adContainer}>
             <AdMobBanner
             adSize="largeBanner"
-            adUnitID="ca-app-pub-5033680827220523/5126214658"
+            adUnitID="ca-app-pub-3940256099942544/6300978111"
+            // adUnitID="ca-app-pub-5033680827220523/5126214658"
             onAdFailedToLoad={error => console.error(error)}
             /> 
           </View>  

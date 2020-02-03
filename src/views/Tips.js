@@ -72,7 +72,7 @@ export default class Tips extends Component {
   }
   render () {
     const {english, german} = this.state
-    if (translate.english) {
+    if (translate.english === "true") {
       return (
         <ScrollView style={styles.container}>
           {english.map(section => (
